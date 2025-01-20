@@ -69,6 +69,7 @@ const closeButton = document.querySelector(".close-btn");
 const openButton = document.querySelector(".nav-open-btn");
 const drawer = document.querySelector("nav");
 const overlay = document.querySelector(".overlay");
+const drawerLink = Array.from(document.querySelectorAll(".navbar-item a"));
 
 openButton.onclick = () => {
   drawer.classList.add("drawerActive");
@@ -85,4 +86,12 @@ overlay.onclick = () => {
   overlay.classList.remove("overlayActive");
   document.body.style.overflow = "auto"; // Allow scrolling
 };
+
+drawerLink.forEach((element) => {
+  element.onclick = () => {
+    drawer.classList.remove("drawerActive");
+    overlay.classList.remove("overlayActive");
+    document.body.style.overflow = "auto"; // Allow scrolling
+  };
+});
 // Drawer End

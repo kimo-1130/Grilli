@@ -349,7 +349,7 @@ header .Navigation {
   left: 0;
 }
 .overlay {
-  z-index: 0;
+  z-index: -10;
   position: fixed;
   top: 0;
   left: 0;
@@ -365,7 +365,8 @@ header .Navigation {
 .navbar .navbar-list {
   margin-top: 60px;
 }
-.navbar .navbar-item {
+.navbar .navbar-item a {
+  display: block;
   border-top: 1px solid gray;
   padding: 15px 0;
   transition: var(--transition-5);
